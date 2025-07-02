@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Passion+One:wght@400;700;900&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Caveat', cursive;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase; --> Tranforma as letras em maiusculas*/
+    font-variant: small-caps; /*Aqui transformamos tudo em maisculas, porém as primeiras letras ficam maiores*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*Aqui como não sabemos midia quiri ainda, utilizamos essa técnica para o título se ajustar comforme diminuimos a nossa largura da viewport, dizendo que o h1 vai ter 10% da viewport*/
+}
+header > P{
+    padding-bottom: 50px;
+}
+header a, footer a{ /*Aqui aplicamos CSS em duas caixas ao mesmo tempo e apontando um filho não direto a*/
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover { /*Aqui aplicamos uma pseudo class em duas caixas ao mesmo tempo, no filho não direto a*/
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;/*Aqui cocnfiguramos um padding em % em relação a viewport (tela)*/
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-weight: bolder;
+    font-size: 3.5vw;
+}
+section > p{
+    padding-bottom: 2em;
+}
+.normal{
+    background-color: white;
+    color: black;
+}
+.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.474);/*Aplicação de sombra interna*/
+    background-size: cover;
+    background-attachment: fixed; /*Aqui fizemos o efeito paralaxe, muito simples, só tornou o bg image fixo. Observe que ele se fixa na área da caixa em que está contida*/
+}
+.imagem > p{
+    display: inline-block; /*Transformanos em inline block para o bg color do p acompanhar o texto*/
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 5px;
+    text-shadow: 2px 2px 0px black;
+}
+#img01{
+    background-image: url('../imagens/background001.jpg'); /*Aqui utilizamos o ../ para indicar que está uma pasta atrás as imagens que quero que carregar*/
+    background-position: right center;
+    
+}
+#img02{
+    background-image: url('../imagens/background002.jpg');
+    
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
